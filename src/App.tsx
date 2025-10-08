@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import './index.css'
+import profileImg from "./assets/image (2).png";
 
 function Section({ id, title, children }: { id: string, title: string, children: React.ReactNode }) {
   return (
@@ -64,15 +65,20 @@ function Hero() {
           </div>
         </div>
         <motion.div
-          className="justify-self-center relative w-40 h-40 md:w-56 md:h-56"
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="w-full h-full rounded-full bg-gradient-to-br from-accent/40 to-white/10 ring-2 ring-white/10 flex items-center justify-center">
-            <span className="text-4xl md:text-6xl font-bold text-white/80">FS</span>
-          </div>
-        </motion.div>
+  className="justify-self-center relative w-40 h-40 md:w-56 md:h-56"
+  initial={{ opacity: 0, scale: 0.8 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.6 }}
+>
+  <div className="w-full h-full rounded-full bg-gradient-to-br from-accent/40 to-white/10 ring-2 ring-white/10 flex items-center justify-center">
+    <img
+      src={profileImg}
+      alt="Filali Saad"
+      className="w-40 h-40 md:w-56 md:h-56 rounded-full object-cover"
+    />
+  </div>
+</motion.div>
+
 
       </div>
     </section>
