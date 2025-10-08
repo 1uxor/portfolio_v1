@@ -64,11 +64,24 @@ function Hero() {
             <a href="#contact" className="px-5 py-3 rounded-lg border border-white/20 text-white">Contact</a>
           </div>
         </div>
-        <motion.div className="justify-self-center" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+        <motion.div
+  className="justify-self-center relative w-40 h-40 md:w-56 md:h-56"
+  initial={{ opacity: 0, scale: 0.8 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.6 }}
+>
+  {/* fallback gradient circle behind the image */}
+  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent/40 to-white/10 ring-2 ring-white/10" />
+
+  {/* image */}
   <img
-    src={profileImg}
+    src={profileImg} // make sure profileImg is imported correctly from src/assets/image.jpg
     alt="Filali Saad"
-    className="w-40 h-40 md:w-56 md:h-56 rounded-full ring-2 ring-white/10 object-cover"
+    className="relative w-full h-full rounded-full object-cover"
+    onError={(e) => {
+      // fallback if image fails to load
+      (e.currentTarget as HTMLImageElement).src = "C:\\multi_agent_mails\\portfolio\\saad-portfolio\\src\\assets\\image (2).png"
+    }}
   />
 </motion.div>
 
