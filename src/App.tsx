@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
 import './index.css'
-import profileImg from './assets/image (2).png'
 
 function Section({ id, title, children }: { id: string, title: string, children: React.ReactNode }) {
   return (
@@ -47,7 +46,7 @@ function Hero() {
   return (
     <section id="about" className="container pt-20 md:pt-28 pb-16">
       <div className="grid md:grid-cols-2 gap-8 items-center">
-        <div>
+      <div>
           <motion.h1
             className="text-4xl md:text-6xl font-extrabold leading-tight"
             initial={{ opacity: 0, y: 16 }}
@@ -65,25 +64,15 @@ function Hero() {
           </div>
         </div>
         <motion.div
-  className="justify-self-center relative w-40 h-40 md:w-56 md:h-56"
-  initial={{ opacity: 0, scale: 0.8 }}
-  whileInView={{ opacity: 1, scale: 1 }}
-  transition={{ duration: 0.6 }}
->
-  {/* fallback gradient circle behind the image */}
-  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent/40 to-white/10 ring-2 ring-white/10" />
-
-  {/* image */}
-  <img
-    src={profileImg} // make sure profileImg is imported correctly from src/assets/image.jpg
-    alt="Filali Saad"
-    className="relative w-full h-full rounded-full object-cover"
-    onError={(e) => {
-      // fallback if image fails to load
-      (e.currentTarget as HTMLImageElement).src = "C:\\multi_agent_mails\\portfolio\\saad-portfolio\\src\\assets\\image (2).png"
-    }}
-  />
-</motion.div>
+          className="justify-self-center relative w-40 h-40 md:w-56 md:h-56"
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="w-full h-full rounded-full bg-gradient-to-br from-accent/40 to-white/10 ring-2 ring-white/10 flex items-center justify-center">
+            <span className="text-4xl md:text-6xl font-bold text-white/80">FS</span>
+          </div>
+        </motion.div>
 
       </div>
     </section>
