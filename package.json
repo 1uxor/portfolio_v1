@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
-  "homepage": "https://saad-filali.github.io/portfolio_v1",
+  "homepage": "https://github.com/1uxor/portfolio_v1",
   "dependencies": {
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.22",
