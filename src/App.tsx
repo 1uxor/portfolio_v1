@@ -57,8 +57,8 @@ function Hero() {
             Data Scientist & ML Engineer
           </motion.h1>
           <p className="mt-6 text-slate-300 text-lg md:text-xl max-w-xl">
-            Élève ingénieur en informatique passionné par la data et l’IA. Je recherche un stage de PFE pour mettre en pratique mes compétences et contribuer à des projets innovants.
-          </p>
+          Je suis un ingénieur en Informatique spécialisé en Data Engineering, Machine Learning et développement web, passionné par la création de solutions fiables, performantes et orientées valeur métier.
+          J’aime transformer des données en outils concrets : dashboards, automatisations, systèmes intelligents, applications web.          </p>
           <div className="mt-8 flex gap-3">
             <a href="#projects" className="bg-accent text-white px-5 py-3 rounded-lg font-medium">Voir mes projets</a>
             <a href="#contact" className="px-5 py-3 rounded-lg border border-white/20 text-white">Contact</a>
@@ -118,28 +118,90 @@ function Projects() {
   const items = [
     {
       title: 'Détection des Fake News',
-      desc: 'Détection de fausses informations sur articles et tweets via NLP et vision pour identifier manipulations et incohérences.',
-      tools: 'PyTorch, Pandas, scikit-learn, Matplotlib, Seaborn, CNN/BERT, SVM, Flask',
+      desc: 'Détection automatique de fausses informations sur articles et tweets via NLP, vision et modèles deep learning.',
+      tools: 'PyTorch, Pandas, scikit-learn, CNN/BERT, Flask',
+      img: './src/assets/Fake news detection.png',  
+      link: '#'
+    },
+    {
+      title: 'Site web pour restaurant (Pays-Bas)',
+      desc: 'Développement complet d’un site vitrine avec affichage du menu, système de réservation en ligne et envoi automatique par e-mail.',
+      tools: 'React, JavaScript, HTML/CSS, Email API',
+      img: './src/assets/resto_screen.png',  
+      link: 'https://pasha-restaurant-mohomz4tv-saadfilali2002-gmailcoms-projects.vercel.app/'
+    },
+    {
+      title: 'Dashboards ventes & livraison',
+      desc: 'Création de tableaux de bord interactifs pour analyser les ventes, les retards de livraison et la performance opérationnelle.',
+      tools: 'Power BI, Python, Pandas, Excel, DAX',
+      img: './src/assets/screen sales proj.png',  
+      link: '#'
+    },
+    {
+      title: 'HR Analytics Dashboard',
+      desc: 'Conception de tableaux de bord RH pour suivre les absences, le turnover, la performance des employés et le pipeline de recrutement.',
+      tools: 'Power BI, DAX, Excel, SQL',
+      img: './src/assets/hrProject_screen.jpg', 
+      link: '#'
+    },
+    {
+      title: 'Data Cleaning Automation Script',
+      desc: 'Automatisation du nettoyage et de la standardisation de jeux de données bruts : gestion des valeurs manquantes, doublons, formats et génération de rapports de qualité des données.',
+      tools: 'Python, Pandas, NumPy, Jupyter, SQL',
+      img: './src/assets/data_process_proj.png', 
+      link: '#'
+    },
+    {
+      title: 'Weather Forecast Dashboard',
+      desc: 'Création d’un dashboard météo interactif alimenté par une API, avec visualisation des tendances de température, d’humidité et des prévisions par ville.',
+      tools: 'Power BI, Power Query, API REST, JSON, Excel',
+      img: './src/assets/weather screen.png', 
       link: '#'
     }
+    
   ]
+  
+  
+  
+  ;
+
   return (
     <Section id="projects" title="Projets">
       <div className="grid md:grid-cols-2 gap-6">
         {items.map((p) => (
-          <article key={p.title} className="rounded-xl border border-white/10 bg-white/5 p-6 flex flex-col gap-3">
+          <article
+            key={p.title}
+            className="rounded-xl border border-white/10 bg-white/5 p-6 flex flex-col gap-4"
+          >
+            {/* IMAGE */}
+            <img
+              src={p.img}
+              alt={p.title}
+              className="w-full h-40 object-cover rounded-lg border border-white/10"
+            />
+
+            {/* TEXT */}
             <h3 className="text-xl font-semibold">{p.title}</h3>
             <p className="text-slate-300">{p.desc}</p>
             <p className="text-sm text-slate-400">{p.tools}</p>
+
+            {/* LINK */}
             <div className="mt-2">
-              <a href={p.link} className="text-accent hover:underline">Voir le code / démo</a>
+              <a
+                href={p.link}
+                className="text-accent hover:underline"
+                target="_blank"
+              >
+                Voir le code / démo
+              </a>
             </div>
           </article>
         ))}
       </div>
     </Section>
-  )
+  );
 }
+
 
 function Experience() {
   const items = [
@@ -155,6 +217,14 @@ function Experience() {
       desc: 'ML pour la livraison: réduction des délais, optimisation d’itinéraires; exposition via API Flask.',
       stack: 'Python, NumPy, Pandas, Seaborn, scikit-learn, Flask'
     },
+    {
+      role: 'Développeur Freelance — Site de réservation pour restaurant (Pays-Bas)',
+      dates: 'Août 2024',
+      desc: 'Conception et développement d’un site web complet pour un restaurant, incluant un menu interactif, un système de réservation en ligne avec envoi automatique par e-mail, et une interface moderne optimisée pour l’expérience utilisateur.',
+      stack: 'HTML, JavaScript, EmailJS (ou API SMTP), CSS/Tailwind'
+    },
+
+    
     {
       role: 'Développeur web — Centre Hospital Al Ghassani, Fès',
       dates: 'Juil 2024 – Août 2024',
