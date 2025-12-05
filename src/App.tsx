@@ -1,6 +1,12 @@
 import { motion } from 'framer-motion'
 import './index.css'
 import profileImg from "./assets/image (2).png";
+import fakeNewsImg from '../assets/fake news detection.png';
+import restoImg from '../assets/resto_screen.png';
+import salesDashboardImg from '../assets/sales dashboard.png';
+import hrDashboardImg from '../assets/hrProject_screen.jpg';
+import dataCleaningImg from '../assets/data_process_proj.png';
+import weatherDashboardImg from '../assets/weather dashboard.png';
 
 function Section({ id, title, children }: { id: string, title: string, children: React.ReactNode }) {
   return (
@@ -120,46 +126,46 @@ function Projects() {
       title: 'Détection des Fake News',
       desc: 'Détection automatique de fausses informations sur articles et tweets via NLP, vision et modèles deep learning.',
       tools: 'PyTorch, Pandas, scikit-learn, CNN/BERT, Flask',
-      img: './src/assets/Fake news detection.png',  
-      link: '#'
+      img: fakeNewsImg,
+      link: '#',
     },
     {
       title: 'Site web pour restaurant (Pays-Bas)',
       desc: 'Développement complet d’un site vitrine avec affichage du menu, système de réservation en ligne et envoi automatique par e-mail.',
       tools: 'React, JavaScript, HTML/CSS, Email API',
-      img: './src/assets/resto_screen.png',  
-      link: 'https://pasha-restaurant-mohomz4tv-saadfilali2002-gmailcoms-projects.vercel.app/'
+      img: restoImg,
+      link: '#',
     },
     {
       title: 'Dashboards ventes & livraison',
       desc: 'Création de tableaux de bord interactifs pour analyser les ventes, les retards de livraison et la performance opérationnelle.',
       tools: 'Power BI, Python, Pandas, Excel, DAX',
-      img: './src/assets/screen sales proj.png',  
-      link: '#'
+      img: salesDashboardImg,
+      link: '#',
     },
     {
       title: 'HR Analytics Dashboard',
       desc: 'Conception de tableaux de bord RH pour suivre les absences, le turnover, la performance des employés et le pipeline de recrutement.',
       tools: 'Power BI, DAX, Excel, SQL',
-      img: './src/assets/hrProject_screen.jpg', 
-      link: '#'
+      img: hrDashboardImg,
+      link: '#',
     },
     {
       title: 'Data Cleaning Automation Script',
       desc: 'Automatisation du nettoyage et de la standardisation de jeux de données bruts : gestion des valeurs manquantes, doublons, formats et génération de rapports de qualité des données.',
       tools: 'Python, Pandas, NumPy, Jupyter, SQL',
-      img: './src/assets/data_process_proj.png', 
-      link: '#'
+      img: dataCleaningImg,
+      link: '#',
     },
     {
       title: 'Weather Forecast Dashboard',
       desc: 'Création d’un dashboard météo interactif alimenté par une API, avec visualisation des tendances de température, d’humidité et des prévisions par ville.',
       tools: 'Power BI, Power Query, API REST, JSON, Excel',
-      img: './src/assets/weather screen.png', 
-      link: '#'
-    }
-    
-  ]
+      img: weatherDashboardImg,
+      link: '#',
+    },
+  ];
+
   
   
   
