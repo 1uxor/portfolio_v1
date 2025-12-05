@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import './index.css'
 import profileImg from "./assets/image (2).png";
-import fakeNewsImg from './assets/fake_news_detection.png';
+import fakeNewsImg from './assets/Fake_news_detection.png';
 import restoImg from './assets/resto_screen.png';
 import salesDashboardImg from './assets/screen_sales_proj.png';
 import hrDashboardImg from './assets/hrProject_screen.jpg';
